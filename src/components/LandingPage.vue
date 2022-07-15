@@ -3,7 +3,9 @@
     <div>
       <img src="@/assets/icons/rocket.svg" alt="asd" class="mb-5" />
     </div>
-    <a href="/form/personal-info" class="font-bold text-xl leading-10">კითხვარის დაწყება</a>
+    <a href="/form/personal-info" class="font-bold text-xl leading-10"
+      >კითხვარის დაწყება</a
+    >
   </div>
 </template>
 

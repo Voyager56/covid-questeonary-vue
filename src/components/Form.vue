@@ -1,6 +1,8 @@
 <template>
-  <div id="form-header"
-    class="flex justify-between items-center mx-[20rem] mt-10 border-b-[2px] border-black pb-5 relative">
+  <div
+    id="form-header"
+    class="flex justify-between items-center mx-[20rem] mt-10 border-b-[2px] border-black pb-5 relative"
+  >
     <img src="@/assets/icons/redberry.svg" alt="redberry logo" />
     <h1 class="text-xl">{{ getPageNumber() }}/4</h1>
   </div>

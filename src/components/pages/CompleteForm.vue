@@ -1,8 +1,18 @@
 <template>
   <div class="bg-black h-[100vh] flex justify-center items-center">
     <a href="/" class="text-5xl text-white tracking-widest">მადლობა</a>
-    <img src="@/assets/images/Frame1.png" alt="star" class="absolute top-[400px] left-[800px]" width="40" />
-    <img src="@/assets/images/Frame1.png" alt="star" class="absolute top-[550px] left-[1000px]" width="30" />
+    <img
+      src="@/assets/images/Frame1.png"
+      alt="star"
+      class="absolute top-[400px] left-[800px]"
+      width="40"
+    />
+    <img
+      src="@/assets/images/Frame1.png"
+      alt="star"
+      class="absolute top-[550px] left-[1000px]"
+      width="30"
+    />
   </div>
 </template>
 
