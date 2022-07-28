@@ -37,7 +37,7 @@ export default createStore({
       return state.pageNumber;
     },
     getData(state) {
-      return {
+      let values = {
         first_name: state.form.personalInfo.name,
         last_name: state.form.personalInfo.lastname,
         email: state.form.personalInfo.mail,
@@ -56,6 +56,13 @@ export default createStore({
         what_about_meetings_in_live: state.form.redberryInfo.meeting,
         tell_us_your_opinion_about_us: state.form.redberryInfo.environment,
       };
+      if (!values.had_antibody_test) delete values.antibodies;
+      for (let key in values) {
+        if (values[key] === null || values[key] === undefined) {
+          delete values[key];
+        }
+      }
+      return values;
     },
   },
   mutations: {

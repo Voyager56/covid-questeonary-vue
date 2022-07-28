@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "@/App.vue";
-import "@/config/vee-validate/validator";
+import "@/config/vee-validate/rules";
 import "@/config/vee-validate/messages";
 import "@/assets/tailwind.css";
 import store from "@/store/index";
