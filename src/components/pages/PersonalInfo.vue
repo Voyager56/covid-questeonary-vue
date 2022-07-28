@@ -32,7 +32,7 @@
             type="mail"
             name="mail"
             v-model="mail"
-            rules="required|min:3|max:225|email"
+            rules="required|min:3|max:225|redberry_email"
             class="border border-gray-500 w-[30rem] h-10 mt-2"
           />
           <ErrorMessage name="mail" />
