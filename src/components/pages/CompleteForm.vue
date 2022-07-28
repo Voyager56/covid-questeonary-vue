@@ -22,12 +22,6 @@ export default {
 
   mounted() {
     let values = this.$store.getters.getData;
-    if (!values.had_antibody_test) delete values.antibodies;
-    for (let key in values) {
-      if (values[key] === null || values[key] === undefined) {
-        delete values[key];
-      }
-    }
     this.$axios.post("/create", values).then((response) => {
       console.log(response);
     });
