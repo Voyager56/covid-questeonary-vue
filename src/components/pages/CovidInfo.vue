@@ -124,9 +124,9 @@
       </Form>
     </div>
     <div id="image" class="relative">
-      <img src="@/assets/images/vaccinate2.png" alt="fever" width="600" />
+      <img src="@/assets/images/vaccinate.png" alt="fever" width="600" />
       <img
-        src="@/assets/images/redcircle.png"
+        src="@/assets/images/thermomter.png"
         alt="reddot"
         class="absolute top-[100px] opacity-50"
       />

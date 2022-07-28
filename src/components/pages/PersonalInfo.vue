@@ -52,7 +52,7 @@
       </Form>
     </div>
     <div id="image-container" class="relative">
-      <img src="@/assets/images/scan2.png" alt="main" width="600" />
+      <img src="@/assets/images/twopeople.png" alt="main" width="600" />
       <img
         src="@/assets/images/mainlogo.png"
         alt="box"

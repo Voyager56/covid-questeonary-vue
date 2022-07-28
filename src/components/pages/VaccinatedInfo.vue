@@ -159,7 +159,7 @@
       </Form>
     </div>
     <div id="image" class="relative">
-      <img src="@/assets/images/doctor2.png" alt="doctor" width="600" />
+      <img src="@/assets/images/doctor.png" alt="doctor" width="600" />
       <img
         src="@/assets/images/star.png"
         alt="star"

@@ -155,7 +155,7 @@
     </div>
     <div id="image" class="relative mx-[20rem]">
       <img
-        src="@/assets/images/bike2.png"
+        src="@/assets/images/bike.png"
         alt="biker"
         width="1500"
         class="mt-[60px]"
