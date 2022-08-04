@@ -23,15 +23,7 @@
                 },
               ],
             }"
-            v-on:change="
-              () => {
-                Object.keys(values).forEach((key) => {
-                  if (key != 'vaccinated') {
-                    delete values[key];
-                  }
-                });
-              }
-            "
+            v-on:change="deleteVaccinatedKeys(values)"
           />
         </div>
         <div
@@ -63,17 +55,7 @@
                 },
               ],
             }"
-            v-on:change="
-              () => {
-                Object.keys(values).forEach((key) => {
-                  if (key === 'stage' || key === 'vaccinated') {
-                    return;
-                  } else {
-                    delete values[key];
-                  }
-                });
-              }
-            "
+            v-on:change="clearStageKeys(values)"
           />
           <div
             class="text-black w-[250px] mt-10"
@@ -175,6 +157,22 @@ export default {
   methods: {
     onSubmit(values) {
       this.$store.commit("setVaccinatedInfo", values);
+    },
+    deleteVaccinatedKeys(values) {
+      Object.keys(values).forEach((key) => {
+        if (key != "vaccinated") {
+          delete values[key];
+        }
+      });
+    },
+    clearStageKeys(values) {
+      Object.keys(values).forEach((key) => {
+        if (key === "stage" || key === "vaccinated") {
+          return;
+        } else {
+          delete values[key];
+        }
+      });
     },
   },
 };
