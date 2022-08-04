@@ -29,15 +29,7 @@
                 text: 'ახლა მაქვს',
               },
             ]"
-            v-on:change="
-              () => {
-                Object.keys(values).forEach((key) => {
-                  if (key != 'covid') {
-                    delete values[key];
-                  }
-                });
-              }
-            "
+            v-on:change="removeKeys(values)"
           />
           <RadioInput
             class="mt-5"
@@ -60,17 +52,7 @@
                 text: 'არა',
               },
             ]"
-            v-on:change="
-              () => {
-                Object.keys(values).forEach((key) => {
-                  if (key === 'covid' || key === 'test') {
-                    return;
-                  } else {
-                    delete values[key];
-                  }
-                });
-              }
-            "
+            v-on:change="removeTestKeys(values)"
           />
           <div
             class="flex flex-col"
@@ -166,6 +148,26 @@ export default {
         values.covid === `have_right_now`
       );
     },
+  },
+  removeCovidKeys(values) {
+    {
+      Object.keys(values).forEach((key) => {
+        if (key != "covid") {
+          delete values[key];
+        }
+      });
+    }
+  },
+  removeTestKeys(values) {
+    {
+      Object.keys(values).forEach((key) => {
+        if (key === "covid" || key === "test") {
+          return;
+        } else {
+          delete values[key];
+        }
+      });
+    }
   },
 };
 </script>
