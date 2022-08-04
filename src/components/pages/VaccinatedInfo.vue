@@ -6,24 +6,23 @@
           <RadioInput
             :name="`უკვე აცრილი ხარ?`"
             rule="required"
-            :values="[
-              {
-                name: 'vaccinated',
-                group: 'vaccinated',
-                type: 'radio',
-                value: true,
-                text: 'კი',
-                rules: 'required',
-              },
-              {
-                name: 'vaccinated',
-                group: 'vaccinated',
-                type: 'radio',
-                value: false,
-                text: 'არა',
-                rules: 'required',
-              },
-            ]"
+            :values="{
+              name: 'vaccinated',
+              group: 'vaccinated',
+              type: 'radio',
+              data: [
+                {
+                  value: true,
+                  text: 'კი',
+                  rules: 'required',
+                },
+                {
+                  value: false,
+                  text: 'არა',
+                  rules: 'required',
+                },
+              ],
+            }"
             v-on:change="
               () => {
                 Object.keys(values).forEach((key) => {
@@ -42,32 +41,28 @@
           <RadioInput
             :name="`აირჩიე რა ეტაპზე ხარ`"
             rule="required"
-            :values="[
-              {
-                name: 'stage',
-                group: 'stage',
-                type: 'radio',
-                value: 'first_dosage_and_registered_on_the_second',
-                rules: `required|${values.vaccinated ? 'required' : 'null'}`,
-                text: 'პირველი დოზა და დარეგისტრირებული ვარ მეორეზე',
-              },
-              {
-                name: 'stage',
-                group: 'stage',
-                type: 'radio',
-                value: `fully_vaccinated`,
-                rules: `required|${values.vaccinated ? 'required' : 'null'}`,
-                text: 'სრულად აცრილი ვარ',
-              },
-              {
-                name: 'stage',
-                group: 'stage',
-                type: 'radio',
-                value: `first_dosage_and_not_registered_yet`,
-                rules: `required|${values.vaccinated ? 'required' : 'null'}`,
-                text: 'პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე',
-              },
-            ]"
+            :values="{
+              name: 'stage',
+              group: 'stage',
+              type: 'radio',
+              data: [
+                {
+                  value: 'first_dosage_and_registered_on_the_second',
+                  rules: `required|${values.vaccinated ? 'required' : 'null'}`,
+                  text: 'პირველი დოზა და დარეგისტრირებული ვარ მეორეზე',
+                },
+                {
+                  value: `fully_vaccinated`,
+                  rules: `required|${values.vaccinated ? 'required' : 'null'}`,
+                  text: 'სრულად აცრილი ვარ',
+                },
+                {
+                  value: `first_dosage_and_not_registered_yet`,
+                  rules: `required|${values.vaccinated ? 'required' : 'null'}`,
+                  text: 'პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე',
+                },
+              ],
+            }"
             v-on:change="
               () => {
                 Object.keys(values).forEach((key) => {
@@ -98,32 +93,28 @@
         >
           <RadioInput
             :name="`რას ელოდები?`"
-            :values="[
-              {
-                name: 'waitingFor',
-                group: 'waitingFor',
-                type: 'radio',
-                value: 'registered_and_waiting',
-                rules: `required|${values.vaccinated ? 'required' : 'null'}`,
-                text: 'დარეგისტრირებული ვარ და ველოდები რიცხვს',
-              },
-              {
-                name: 'waitingFor',
-                group: 'waitingFor',
-                type: 'radio',
-                value: `not_planning`,
-                rules: `required|${values.vaccinated ? 'required' : 'null'}`,
-                text: 'არ ვგეგმავ',
-              },
-              {
-                name: 'waitingFor',
-                group: 'waitingFor',
-                type: 'radio',
-                value: `had_covid_and_planning_to_be_vaccinated`,
-                rules: `required|${values.vaccinated ? 'required' : 'null'}`,
-                text: 'გადატანილი მაქვს და ვგეგმავ აცრას',
-              },
-            ]"
+            :values="{
+              name: 'waitingFor',
+              group: 'waitingFor',
+              type: 'radio',
+              data: [
+                {
+                  value: 'registered_and_waiting',
+                  rules: `required|${values.vaccinated ? 'required' : 'null'}`,
+                  text: 'დარეგისტრირებული ვარ და ველოდები რიცხვს',
+                },
+                {
+                  value: `not_planning`,
+                  rules: `required|${values.vaccinated ? 'required' : 'null'}`,
+                  text: 'არ ვგეგმავ',
+                },
+                {
+                  value: `had_covid_and_planning_to_be_vaccinated`,
+                  rules: `required|${values.vaccinated ? 'required' : 'null'}`,
+                  text: 'გადატანილი მაქვს და ვგეგმავ აცრას',
+                },
+              ],
+            }"
           />
           <div
             class="text-black w-[250px] mt-10"

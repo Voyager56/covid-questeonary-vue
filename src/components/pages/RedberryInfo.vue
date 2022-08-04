@@ -21,95 +21,67 @@
             class="mt-10"
             :name="`რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები, სადაც ყველა სურვილისამებრ ჩაერთვება?*`"
             rule="required"
-            :values="[
-              {
-                name: 'meetingFrequency',
-                group: 'meetingFrequency',
-                type: 'radio',
-                value: 'twice_a_week',
-                text: 'კვირაში ორჯერ',
-                rules: 'required',
-              },
-              {
-                name: 'meetingFrequency',
-                group: 'meetingFrequency',
-                type: 'radio',
-                value: `once_a_week`,
-                text: 'კვირაში ერთხელ',
-                rules: 'required',
-              },
-              {
-                name: 'meetingFrequency',
-                group: 'meetingFrequency',
-                type: 'radio',
-                value: `once_in_a_two_weeks`,
-                text: 'ორ კვირაში ერთხელ',
-                rules: 'required',
-              },
-              {
-                name: 'meetingFrequency',
-                group: 'meetingFrequency',
-                type: 'radio',
-                value: `once_in_a_month`,
-                text: 'თვეში ერთხელ',
-                rules: 'required',
-              },
-            ]"
+            :values="{
+              name: 'meetingFrequency',
+              group: 'meetingFrequency',
+              type: 'radio',
+              rules: 'required',
+              data: [
+                {
+                  value: 'twice_a_week',
+                  text: 'კვირაში ორჯერ',
+                },
+                {
+                  value: `once_a_week`,
+                  text: 'კვირაში ერთხელ',
+                },
+                {
+                  value: `once_in_a_two_weeks`,
+                  text: 'ორ კვირაში ერთხელ',
+                },
+                {
+                  value: `once_in_a_month`,
+                  text: 'თვეში ერთხელ',
+                },
+              ],
+            }"
           />
           <RadioInput
             class="mt-10"
             :name="`კვირაში რამდენი დღე ისურვებდი ოფისიდან მუშაობას?*`"
             rule="required"
-            :values="[
-              {
-                name: 'office',
-                group: 'office',
-                type: 'radio',
-                value: `0`,
-                text: '0',
-                rules: 'required',
-              },
-              {
-                name: 'office',
-                group: 'office',
-                type: 'radio',
-                value: `1`,
-                text: '1',
-                rules: 'required',
-              },
-              {
-                name: 'office',
-                group: 'office',
-                type: 'radio',
-                value: `2`,
-                text: '2',
-                rules: 'required',
-              },
-              {
-                name: 'office',
-                group: 'office',
-                type: 'radio',
-                value: `3`,
-                text: '3',
-                rules: 'required',
-              },
-              {
-                name: 'office',
-                group: 'office',
-                type: 'radio',
-                value: `4`,
-                text: '4',
-                rules: 'required',
-              },
-              {
-                name: 'office',
-                group: 'office',
-                type: 'radio',
-                value: `5`,
-                text: '5',
-                rules: 'required',
-              },
-            ]"
+            :values="{
+              group: 'office',
+              name: 'office',
+              type: 'radio',
+              rules: 'required',
+              data: [
+                {
+                  value: `0`,
+                  text: '0',
+                },
+                {
+                  value: `1`,
+                  text: '1',
+                },
+                {
+                  value: `2`,
+                  text: '2',
+                },
+                {
+                  value: `3`,
+                  text: '3',
+                },
+                {
+                  value: `4`,
+                  text: '4',
+                },
+                {
+                  value: `5`,
+                  text: '5',
+                },
+              ],
+            }"
           />
           <div class="flex flex-col">
             <label class="text-xl w-max-[200px] text-left mt-5" for="covid-date"

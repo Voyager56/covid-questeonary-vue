@@ -6,29 +6,25 @@
           <RadioInput
             :name="`გადატანილი გაქვთ კოვიდი?`"
             rule="required"
-            :values="[
-              {
-                name: 'hadCovid',
-                group: 'covid',
-                type: 'radio',
-                value: 'yes',
-                text: 'კი',
-              },
-              {
-                name: 'hadCovid',
-                group: 'covid',
-                type: 'radio',
-                value: `no`,
-                text: 'არა',
-              },
-              {
-                name: 'hadCovid',
-                group: 'covid',
-                type: 'radio',
-                value: `have_right_now`,
-                text: 'ახლა მაქვს',
-              },
-            ]"
+            :values="{
+              name: 'hadCovid',
+              group: 'covid',
+              type: 'radio',
+              data: [
+                {
+                  value: 'yes',
+                  text: 'კი',
+                },
+                {
+                  value: `no`,
+                  text: 'არა',
+                },
+                {
+                  value: `have_right_now`,
+                  text: 'ახლა მაქვს',
+                },
+              ],
+            }"
             v-on:change="removeKeys(values)"
           />
           <RadioInput
@@ -36,22 +32,21 @@
             :class="{ hidden: values.covid !== `yes` }"
             :name="`ანტისხეულების ტესტი გაქვს გაკეთებული?*`"
             rule="required"
-            :values="[
-              {
-                name: 'hadTest',
-                group: 'test',
-                type: 'radio',
-                value: true,
-                text: 'კი',
-              },
-              {
-                name: 'hadTest',
-                group: 'test',
-                type: 'radio',
-                value: false,
-                text: 'არა',
-              },
-            ]"
+            :values="{
+              name: 'hadTest',
+              group: 'test',
+              type: 'radio',
+              data: [
+                {
+                  value: true,
+                  text: 'კი',
+                },
+                {
+                  value: false,
+                  text: 'არა',
+                },
+              ],
+            }"
             v-on:change="removeTestKeys(values)"
           />
           <div
