@@ -147,7 +147,7 @@
           </button>
           <NavigationButtons
             class="bottom-[-100px] left-[50%] lg:left-[90%]"
-            :prevPage="`vaccinated-info`"
+            :prevPage="`/form/3/vaccinated-info`"
             :nextPage="``"
           />
         </div>

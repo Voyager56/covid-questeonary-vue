@@ -117,16 +117,16 @@
         </div>
         <NavigationButtons
           :valid="isValid(values)"
-          :prevPage="`personal-info`"
-          :nextPage="`vaccinated-info`"
+          :prevPage="`/form/1/personal-info`"
+          :nextPage="`/form/3/vaccinated-info`"
           @click="onSubmit({ ...values })"
         />
       </Form>
     </div>
     <div id="image" class="relative">
-      <img src="@/assets/images/vaccinate.png" alt="fever" width="600" />
+      <img src="@/assets/images/thermometer.png" alt="fever" width="600" />
       <img
-        src="@/assets/images/thermomter.png"
+        src="@/assets/images/redcircle.png"
         alt="reddot"
         class="absolute top-[100px] opacity-50"
       />

@@ -3,7 +3,6 @@ import { createStore } from "vuex";
 export default createStore({
   state() {
     return {
-      pageNumber: 1,
       page: "form/personal-info",
       errors: {},
       form: {
@@ -33,9 +32,6 @@ export default createStore({
     };
   },
   getters: {
-    getPage(state) {
-      return state.pageNumber;
-    },
     getData(state) {
       let values = {
         first_name: state.form.personalInfo.name,
@@ -66,12 +62,6 @@ export default createStore({
     },
   },
   mutations: {
-    decrement(state) {
-      state.pageNumber--;
-    },
-    increment(state) {
-      state.pageNumber++;
-    },
     setCovidInfo(state, value) {
       state.form.covidInfo = value;
     },

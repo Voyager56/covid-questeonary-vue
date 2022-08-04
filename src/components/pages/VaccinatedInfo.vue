@@ -150,8 +150,8 @@
 
         <NavigationButtons
           @click="onSubmit({ ...values })"
-          :prevPage="`covid-info`"
-          :nextPage="`redberry-info`"
+          :prevPage="`/form/2/covid-info`"
+          :nextPage="`/form/4/redberry-info`"
           :valid="
             values.vaccinated === false ? values.waitingFor : values.stage
           "

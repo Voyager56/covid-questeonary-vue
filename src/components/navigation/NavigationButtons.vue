@@ -39,11 +39,9 @@ export default {
   methods: {
     goToPreviousPage() {
       this.$router.push(this.prevPage);
-      this.$store.commit("decrement");
     },
     goToNextPage() {
       this.$router.push(this.nextPage);
-      this.$store.commit("increment");
     },
   },
 };

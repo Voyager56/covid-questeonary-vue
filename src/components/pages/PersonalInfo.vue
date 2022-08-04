@@ -46,7 +46,7 @@
         <NavigationButtons
           @click="onSubmit"
           :prevPage="null"
-          :nextPage="`covid-info`"
+          :nextPage="`/form/2/covid-info`"
           :valid="meta.valid"
         />
       </Form>
@@ -54,7 +54,7 @@
     <div id="image-container" class="relative">
       <img src="@/assets/images/twopeople.png" alt="main" width="600" />
       <img
-        src="@/assets/images/mainlogo.png"
+        src="@/assets/images/yellowrectangle.png"
         alt="box"
         class="absolute top-[150px] opacity-50"
       />

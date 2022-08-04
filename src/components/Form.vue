@@ -4,7 +4,7 @@
     class="flex justify-between items-center mx-[20rem] mt-10 border-b-[2px] border-black pb-5 relative"
   >
     <img src="@/assets/icons/redberry.svg" alt="redberry logo" />
-    <h1 class="text-xl">{{ getPageNumber() }}/4</h1>
+    <h1 class="text-xl">{{ page }}/4</h1>
   </div>
   <router-view v-slot="{ Component }">
     <keep-alive>
@@ -17,7 +17,16 @@
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      page: null,
+    };
+  },
+  mounted() {
+    this.page = this.$route.path.replace(/[^0-9]/g, "");
+  },
+  updated() {
+    this.page = this.$route.path.replace(/[^0-9]/g, "");
+    console.log(this.page);
   },
   methods: {
     getPageNumber() {

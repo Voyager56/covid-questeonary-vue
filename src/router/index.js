@@ -16,19 +16,19 @@ const router = createRouter({
       component: Form,
       children: [
         {
-          path: "personal-info",
+          path: "1/personal-info",
           component: PersonalInfo,
         },
         {
-          path: "covid-info",
+          path: "2/covid-info",
           component: CovidInfo,
         },
         {
-          path: "vaccinated-info",
+          path: "3/vaccinated-info",
           component: VaccinatedInfo,
         },
         {
-          path: "redberry-info",
+          path: "4/redberry-info",
           component: RedberryInfo,
         },
       ],
